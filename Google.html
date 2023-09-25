@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google-like Search Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    #search-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 150px;
+    }
+    
+    #logo {
+      width: 200px;
+      margin-bottom: 50px;
+    }
+    
+    #search-form {
+      display: flex;
+      justify-content: center;
+    }
+    
+    #search-input {
+      width: 400px;
+      height: 30px;
+      font-size: 16px;
+      padding: 5px;
+    }
+    
+    #search-button {
+      margin-left: 10px;
+      padding: 5px 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div id="search-container">
+    <img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+    
+    <form id="search-form" action="https://www.google.com/search" method="GET" target="_blank">
+      <input id="search-input" type="text" name="q" placeholder="Search Google">
+      <input id="search-button" type="submit" value="Search">
+    </form>
+  </div>
+</body>
+</html>
