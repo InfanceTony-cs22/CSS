@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inline Styles Example</title>
+</head>
+<body>
+    <h1 style="color: blue; text-align: center;">I'M  TONY</h1>
+    <p style="font-size: 16px; line-height: 1.5;">IN LINE METHOD IN CSS.</p>
+    <div style="background-color: #f0f0f0; padding: 10px;">
+        <p>EVERY THING CAN BE CHANGED USING  CSS .</p>
+    </div>
+    <button style="background-color: green; color: white; border: none; padding: 10px 20px; cursor: pointer;">DONT TOUCH MEEEEE</button>
+</body>
+</html>
