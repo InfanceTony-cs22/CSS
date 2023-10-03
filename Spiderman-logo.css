@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider-Man Animation</title>
+    <style>
+        body {
+            background-color: white; /* Change background color to white */
+            margin: 0;
+            overflow: hidden;
+        }
+        #spiderman {
+            width: 100px;
+            height: 100px;
+            background-image: url('https://th.bing.com/th?id=OIP.K9BTaBrHA5u5bFLSGPRyxwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'); /* Replace with your Spider-Man image */
+            background-size: cover;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform-origin: bottom;
+            transform: translateX(-50%) rotate(0deg);
+            transition: transform 2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div id="spiderman"></div>
+    <script>
+        const spiderman = document.getElementById('spiderman');
+        let swingDirection = 1; // 1 for right, -1 for left
+
+        function swing() {
+            spiderman.style.transform = `translateX(-50%) rotate(${swingDirection * 45}deg)`;
+            swingDirection *= -1;
+            setTimeout(swing, 2000); // Swing every 2 seconds
+        }
+
+        swing();
+    </script>
+</body>
+</html>
