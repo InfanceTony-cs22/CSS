@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Balloon Birthday Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f3f3f3;
+            margin: 0;
+            overflow: hidden;
+        }
+        .card {
+            background-color: #fff;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+        }
+        h1 {
+            color: #ff6f61;
+        }
+        p {
+            font-size: 18px;
+        }
+        #birthday-message {
+            display: none;
+            font-weight: bold;
+        }
+        button {
+            background-color: #ff6f61;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .balloon {
+            font-size: 36px;
+            position: absolute;
+            animation: float 1s ease-in-out infinite;
+            transform-origin: center bottom;
+        }
+        .blue-balloon {
+            color: blue;
+        }
+        .pink-balloon {
+            color: pink;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Happy Birthday!</h1>
+        <p>Dear Friend,</p>
+        <p>Wishing you a day filled with joy and laughter. May all your dreams and wishes come true!</p>
+        <p>Let's celebrate and make this day special.</p>
+        <button id="show-message">Open Your Gift</button>
+        <p id="birthday-message">🎉🎁🎂 Surprise! It's a virtual birthday card made just for you! 🎂🎁🎉</p>
+    </div>
+
+    <script>
+        document.getElementById('show-message').addEventListener('click', function() {
+            document.getElementById('birthday-message').style.display = 'block';
+            this.style.display = 'none';
+            createBalloons();
+        });
+
+        function createBalloons() {
+            const numBalloons = 50; // Increase the number of balloons
+            const balloonContainer = document.body;
+
+            for (let i = 0; i < numBalloons; i++) {
+                const balloon = document.createElement('span');
+                balloon.className = 'balloon';
+                balloon.innerHTML = '🎈';
+
+                // Randomly assign a class for color (blue or pink)
+                if (Math.random() < 0.5) {
+                    balloon.classList.add('blue-balloon');
+                } else {
+                    balloon.classList.add('pink-balloon');
+                }
+
+                const left = `${Math.random() * 100}%`;
+                const top = `${Math.random() * 100}%`;
+                balloon.style.left = left;
+                balloon.style.top = top;
+                balloonContainer.appendChild(balloon);
+            }
+        }
+    </script>
+</body>
+</html>
