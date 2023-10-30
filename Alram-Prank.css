@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alarm Page</title>
+</head>
+<body>
+  <h1>This is the Alarm Page</h1>
+  
+  <!-- Add an audio element to play the alarm sound -->
+  <audio id="alarm-sound" src="your-alarm-sound.mp3" preload="auto"></audio>
+
+  <script>
+    // Automatically play the alarm sound when the page is loaded
+    const alarmSound = document.getElementById('alarm-sound');
+    alarmSound.play();
+  </script>
+</body>
+</html>
